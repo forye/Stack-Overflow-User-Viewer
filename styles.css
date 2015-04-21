@@ -1,0 +1,29 @@
+body{ text-align:center; font-family:'Roboto', sans-serif; margin:0; padding:0; }
+
+
+/*********** HEADER *************/
+header{ background:#EEE; padding:30px 0; }
+    header h1{ font-size:2em; font-weight:300; margin:0 0 10px 0; }
+    #searchedName{ padding:5px; text-align:center; font-size:1.5em; width:320px; border-radius:20px; border:1px solid #e1e1e1; background:#FFF; outline:none; transition:.22s cubic-bezier(.07,1,.68,1.15); }
+    #searchedName:focus{ width:450px; }
+
+/*********** USERS LIST *************/
+.content{  }
+.content.error{ color:red; }
+.userItem{ display:inline-block; vertical-align:top; padding:1%; border-radius:8px; cursor:pointer; }
+.userItem.active{ box-shadow: 0 0 0 4px #F1F1F1 inset; }
+.userItem:hover{ background:#F1F1F1; }
+.userItem img{ border-radius:50%; width:100px; }
+.userItem .details{ font-weight:300; font-size:14px; }
+    .userItem .details > span{ display:block; }
+    .userItem .name{ font-weight:700; font-size:1.1em; }
+
+    .userItem .details > .from{ max-width:160px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .userItem .details > .from:before{ content:'from '; color:#777; }
+    .userItem .details > .from:empty{ display:none; }
+
+
+
+/*********** CHART *************/
+#chart{ display:inline-block; margin-top:50px; width:50%; }
+    #chart svg{ width:100%; height:400px; }
