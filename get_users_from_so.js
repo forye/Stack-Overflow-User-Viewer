@@ -289,7 +289,7 @@ function getUserTags() {
 }
 
 ///////// demo graph
-printGraph([{"key":"activity","bar":true,"color":"#f66","values":[{"x":1404162000000,"y":1},{"x":1285880400000,"y":1},{"x":1264975200000,"y":2}]},{"key":"reputation","color":"#6cf","values":[{"x":1427835600000,"y":326},{"x":1425160800000,"y":487},{"x":1422741600000,"y":474},{"x":1420063200000,"y":332},{"x":1417384800000,"y":437},{"x":1414792800000,"y":530},{"x":1412110800000,"y":363},{"x":1409518800000,"y":461},{"x":1406840400000,"y":470}]}]);
+//printGraph([{"key":"activity","bar":true,"color":"#f66","values":[{"x":1404162000000,"y":1},{"x":1285880400000,"y":1},{"x":1264975200000,"y":2}]},{"key":"reputation","color":"#6cf","values":[{"x":1427835600000,"y":326},{"x":1425160800000,"y":487},{"x":1422741600000,"y":474},{"x":1420063200000,"y":332},{"x":1417384800000,"y":437},{"x":1414792800000,"y":530},{"x":1412110800000,"y":363},{"x":1409518800000,"y":461},{"x":1406840400000,"y":470}]}]);
 
 function printGraph(data){
 	nv.addGraph(function(){
@@ -301,12 +301,12 @@ function printGraph(data){
         chart.xAxis.tickFormat(function(d) {
                 return d3.time.format('%x')(new Date(d))
             })
-            .showMaxMin(false);
+            .showMaxMin(true);
 
        // chart.y1Axis.tickFormat(function(d) { return '$' + d3.format(',f')(d) });
       //  chart.bars.forceY([0]).padData(false);
 
-        chart.focusEnable(false);
+        chart.focusEnable(true);
 	    chartElm.html('<svg>'); // I added this to clean the last graph and create an empty <SVG> element inside the chart div
 
         chart.x2Axis.tickFormat(function(d) {
